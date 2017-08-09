@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  window-shopper
 //
 //  Created by Lancelot Edwards on 08/08/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
