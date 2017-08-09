@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -43,33 +48,71 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmL-E8-uRC">
+                                <rect key="frame" x="20" y="296" width="374" height="68.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEa-J5-y9t">
+                                <rect key="frame" x="184" y="369.33333333333331" width="46" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="46" id="3pG-eA-whj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RT-c2-nmn">
+                                <rect key="frame" x="20" y="666" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ckG-Ju-MNr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdE-yx-oT7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5RT-c2-nmn" firstAttribute="centerX" secondItem="kmL-E8-uRC" secondAttribute="centerX" id="5kT-ms-z3z"/>
                             <constraint firstItem="lg2-Xq-cCk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Hz3-yQ-GC8"/>
                             <constraint firstItem="aem-1K-Mby" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MPn-vE-QjQ"/>
+                            <constraint firstItem="kmL-E8-uRC" firstAttribute="width" secondItem="sAG-3o-Xvi" secondAttribute="width" id="NAk-an-btd"/>
                             <constraint firstItem="lxh-0L-NNn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ORv-Rr-09o"/>
                             <constraint firstItem="sAG-3o-Xvi" firstAttribute="height" secondItem="lg2-Xq-cCk" secondAttribute="height" id="UMI-Fv-Bvu"/>
                             <constraint firstItem="lg2-Xq-cCk" firstAttribute="top" secondItem="aem-1K-Mby" secondAttribute="bottom" constant="36" id="Vrr-ta-gRw"/>
                             <constraint firstItem="aem-1K-Mby" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="VzI-Jc-UfR"/>
+                            <constraint firstItem="kmL-E8-uRC" firstAttribute="top" secondItem="sAG-3o-Xvi" secondAttribute="bottom" constant="44" id="ZS7-0F-7Rt"/>
                             <constraint firstItem="sAG-3o-Xvi" firstAttribute="top" secondItem="lg2-Xq-cCk" secondAttribute="bottom" constant="26" id="blW-eY-EB9"/>
+                            <constraint firstItem="BEa-J5-y9t" firstAttribute="top" secondItem="kmL-E8-uRC" secondAttribute="bottom" constant="5" id="hfr-oV-CVp"/>
                             <constraint firstItem="lxh-0L-NNn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="n7f-vc-jKa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lg2-Xq-cCk" secondAttribute="trailing" constant="20" id="p6Z-OR-234"/>
                             <constraint firstItem="sAG-3o-Xvi" firstAttribute="trailing" secondItem="lg2-Xq-cCk" secondAttribute="trailing" id="sAm-HZ-54H"/>
                             <constraint firstItem="sAG-3o-Xvi" firstAttribute="leading" secondItem="lg2-Xq-cCk" secondAttribute="leading" id="tDg-LP-hwB"/>
                             <constraint firstItem="lxh-0L-NNn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="up8-zS-vHb"/>
+                            <constraint firstItem="BEa-J5-y9t" firstAttribute="centerX" secondItem="kmL-E8-uRC" secondAttribute="centerX" id="vOz-PC-T0o"/>
+                            <constraint firstItem="kmL-E8-uRC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vjg-Kh-Y2R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5RT-c2-nmn" secondAttribute="bottom" constant="20" id="wsK-5b-wQn"/>
+                            <constraint firstItem="5RT-c2-nmn" firstAttribute="width" secondItem="kmL-E8-uRC" secondAttribute="width" id="yC6-85-hdO"/>
                             <constraint firstItem="lxh-0L-NNn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zmS-mW-d5b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLabel" destination="BEa-J5-y9t" id="JXd-mo-1WY"/>
                         <outlet property="priceTextField" destination="sAG-3o-Xvi" id="7FT-DC-SB4"/>
+                        <outlet property="resultLabel" destination="kmL-E8-uRC" id="KOc-ke-raL"/>
                         <outlet property="wageTextField" destination="lg2-Xq-cCk" id="cv9-uc-gE4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="104"/>
+            <point key="canvasLocation" x="47.826086956521742" y="103.53260869565219"/>
         </scene>
     </scenes>
     <resources>
